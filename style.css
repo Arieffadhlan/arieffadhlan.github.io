@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Viga', sans-serif;
+    animation: transitionIn 1s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: relative;
+    z-index: 1;
+    background: #3b6175;
+}
+
+.navbar-brand {
+    font-family: 'Viga', sans-serif;
+    font-size: 28px !important;
+}
+
+.nav-link {
+    font-family: 'Viga', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.utama {
+    font-weight: bold;
+}
+
+.navbar-nav .btn {
+    font-family: 'Viga', sans-serif;
+    font-size: 16px;
+}
+
+/* Jumbotron-bootstrap */
+.jumbotron {
+    background-image: url(img/Desk.jpg);
+    background-size: cover;
+    height: 540px;
+    text-align: center;
+    position: relative;
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron .display-4 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 90px !important;
+    font-weight: 500px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    font-size: 50px !important;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.jumbotron .display-5 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    font-size: 20px !important;
+    font-weight: normal;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.jumbotron .welcome {
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* inside container */
+.inside-container {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    margin-top: -150px;
+    background-color: #ebae34;
+    padding: 30px 30px 10px 30px;
+}
+
+.inside-container img {
+    width: 80px;
+    height: 90px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.inside-container h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.inside-container p {
+    font-size: 14px;
+    color: whitesmoke;
+    margin-top: -5px;
+    font-weight: 200px;
+}
+
+/* Card */
+.card {
+    margin-top: 30px;
+    margin-left: 96px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3)
+}
+
+.card-body {
+    text-align: justify;
+}
+
+.card-body .btn {
+    margin-left: 77px;
+}
+
+/* Footer */
+.page-footer {
+    background-color: #263238;
+    color: lightgrey;
+    margin-top: 30px;
+}
+
+.company {
+    text-align: justify;
+}
+
+.quick {
+    text-decoration: none;
+    color: darkcyan;
+}
+
+.quick:hover {
+    text-decoration: none;
+    color: darkcyan;
+    border-bottom: 3px solid #ebae34;
+    padding-bottom: 3px;
+}
+
+/* Social */
+.fab {
+    font-size: medium;
+    cursor: pointer;
+}
+
+.fa-facebook-f {
+    color: #4064AC;
+}
+
+.fa-twitter {
+    color: #009DED;
+}
+
+#instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.fa-github {
+    color: #161414;
+}
+
+/* go to top */
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 9px; 
+    right: 5px; 
+    z-index: 100; 
+    border: none; 
+    outline: none; 
+    background-color: #f4b538; 
+    color: black;
+    cursor: pointer; 
+    padding: 10px; 
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    /* Navbar */
+    .navbar {
+        background: none;
+    }
+
+    .navbar-brand, .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #ebae34;
+        width: 60%;
+        margin: auto;
+        padding-bottom: 4px;
+        margin-bottom: -7px;
+    }
+
+    .utama {
+        font-weight: bold;
+    }
+
+    /* set dark mode */
+    .icons {
+        text-align: right;
+        margin-top: 15px;
+        margin-right: -7.5px;
+    }
+
+    #icon1 {
+        color: black;
+    }
+    
+    #icon2 {
+        color: white;
+        padding-left: 5px;
+    }
+
+    /* Jumbotron */
+    .jumbotron {
+        margin-top: -80px;
+        height: 640px;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 60px;
+        margin-top: 40px !important;
+    }
+
+    .jumbotron .display-5 {
+        font-size: 25px;
+    }
+
+    /* inside-container */
+    .inside-container {
+        margin-top: -110px;
+    }
+
+    /* Card */
+    .card {
+        margin-left: 17px;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .card:hover {
+        margin-top: 20px;
+        margin-left: 20px;
+        transition: 0.3s;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.6)
+    }
+
+    /* Footer */
+    #copyright {
+        text-align: center;
+        margin-left: 200px;
+    }
+
+    /* Social */
+    .social {
+        margin-left: 455px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .jumbotron .display-4 {
+        margin-top: 140px !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .col-md-4 {
+        margin-left: -20px !important;
+        margin-right: 50px !important;
+    }
+
+    .jumbotron .display-4 {
+        margin-top: 140px !important;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .col-md-4 {
+            margin-right: 210px !important;
+            margin-left: -100px !important;
+    }
+
+    .jumbotron .display-4 {
+        margin-top: 35px !important;
+    }
+}
+
+/* Smartphone */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .jumbotron .display-4 {
+        font-size: 40px !important;
+        margin-top: 35px !important;
+    }
+}
+
+@media screen and (min-width: 561px) and (max-width: 576.98px) {
+    .nav-link {
+            text-align: center;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 40px !important;
+        margin-top: 60px !important;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 560.98px) {
+    .col-md-4 {
+        margin-right: 110px !important;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 30px !important;
+        margin-top: 75px !important;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 480.98px) {
+    .navbar-brand {
+        font-size: 25px !important;
+    }
+    
+    .col-md-4 {
+        margin-right: 110px !important;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 30px !important;
+        margin-top: 80px !important;
+    }
+}
+
+@media screen and (min-width: 365px) and (max-width: 420.98px) {
+    .navbar-brand {
+        font-size: 22px !important;
+    }
+    
+    .col-md-4 {
+        margin-right: 123px !important;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 30px !important;
+        margin-top: 80px !important;
+    }
+}
+
+@media screen and (max-width: 364.98px) {
+    .navbar-brand {
+        font-size: 20px !important;
+    }
+    
+    .col-md-4 {
+        margin-right: 190px !important;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 25px !important;
+        margin-top: 80px !important;
+    }
+}
+
+@media screen and (max-width: 336.98px) {
+    .navbar-brand {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 313.98px) {
+    .navbar-brand {
+        font-size: 15px !important;
+    }
+}
